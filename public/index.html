@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/button.css">
+    <link rel="stylesheet" href="./css/vtheftform.css">
+    <link rel="stylesheet" href="./css/vtheftview.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>113</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Vehicle Theft List</h1>
+        <table class="table" id="vtheft-collection-table">
+            <thead>
+                <tr>
+                    <th>License Number</th>
+                    <th>Owner</th>
+                    <th>Status (toggle)</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <!-- VTheftCollectionView will be here -->
+        </table>
+        <div id="vtheft-form-container">
+            <!-- VTheftFormView instance will be here -->
+        </div>
+    </div>
+
+    <script type="text/template" id="vtheft-template">
+        <td class="table-primary owner"><%= owner %></td>
+        <td class="table-primary license-no"><%= licenseNo %></td>
+        <td class="table-primary toggle">
+            <button id="recovered" class="toggle-status btn <%= status ? 'btn-success': 'btn-light' %> <%= !status ? 'blurred' : '' %>">
+                Recovered
+            </button>
+            <button id="stolen" class="toggle-status btn <%= status ? 'btn-light':'btn-danger' %> <%= status ? 'blurred': '' %>">
+                Stolen
+            </button>
+        </td>
+        <td class="table-primary edit">
+            <button id="edit" class="activate-edit-vtheft btn btn-secondary">Edit</button>
+        </td>
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.6.0/backbone-min.js"></script>
+    <script src="app.js" type="module"></script>
+</body>
+</html>

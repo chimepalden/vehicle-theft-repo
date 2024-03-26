@@ -1,0 +1,15 @@
+td .table-primary .toggle {
+    display: flex;
+}
+
+td .table-primary .edit {
+    display: flex;
+}
+
+.apply-edit-vtheft {
+    background-color: grey;
+}
+.cancel-edit-vtheft {
+    background-color: red;
+    margin-left: 5px;
+}

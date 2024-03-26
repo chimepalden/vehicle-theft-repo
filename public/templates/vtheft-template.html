@@ -1,0 +1,12 @@
+<script type="text/template" id="vtheft-template">
+    <td class="table-primary"><%= owner %></td>
+    <td class="table-primary"><%= licenseNo %></td>
+    <td class="table-primary">
+        <button id="recovered" class="toggle-status btn <%= status ? 'btn-success': 'btn-secondary' %>">
+            Recovered
+        </button>
+        <button id="stolen" class="toggle-status btn <%= status ? 'btn-secondary':'btn-danger' %>">
+            Stolen
+        </button>
+    </td>
+</script>
